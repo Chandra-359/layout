@@ -3,7 +3,7 @@ INSERT INTO layout (name, description) VALUES ('Default Layout', 'The default la
 INSERT INTO layout (name, description) VALUES ('Admin Layout', 'A special layout for administrators');
 INSERT INTO layout (name, description) VALUES ('Custom Layout', 'A customizable layout for advanced users');
 
--- Populate User table
+-- Populate User table (escaping the table name)
 INSERT INTO "user" (username, password) VALUES ('admin', '{noop}password');
 INSERT INTO "user" (username, password) VALUES ('user1', '{noop}password');
 INSERT INTO "user" (username, password) VALUES ('user2', '{noop}password');

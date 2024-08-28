@@ -37,6 +37,7 @@ public class LayoutController {
     @GetMapping("/user/{userId}")
     public Layout getLayoutForUser(@PathVariable Long userId){
         User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
+        System.out.println("User: " + user);
         return layoutService.getLayoutForUser(user);
     }
 

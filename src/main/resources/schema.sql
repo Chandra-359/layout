@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS layout (
     description VARCHAR(255)
 );
 
--- Create the User table
+-- Create the User table (escaping the table name)
 CREATE TABLE IF NOT EXISTS "user" (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(255) UNIQUE NOT NULL,

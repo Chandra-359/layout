@@ -24,6 +24,7 @@ public class SecurityConfig{
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/h2-console/**").permitAll()
+                        .requestMatchers("/api/layouts/user/**").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/api/layouts/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
